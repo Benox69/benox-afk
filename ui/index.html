@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body id="container" class="bg-slate-900 bg-opacity-85 flex justify-center items-center h-screen">
+    
+    <form class="max-w-md w-full px-4 py-8 flex flex-col justify-center items-center">
+        <h2 id="verification-code" class="text-white text-5xl font-bold tracking-[.30em] mb-8">0000</h2>
+
+        <div class="flex mb-2 space-x-2 rtl:space-x-reverse">
+            <div>
+                <label for="code-1" class="sr-only"></label>
+                <input type="text" maxlength="1" data-focus-input-init data-focus-input-next="code-2" id="code-1" class="block w-20 h-20 py-4 text-2xl font-bold text-center text-gray-900 bg-transparent border border-gray-300 rounded-lg focus:ring-primary-500 focus:border-primary-500 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" required />
+            </div>
+            <div>
+                <label for="code-2" class="sr-only"></label>
+                <input type="text" maxlength="1" data-focus-input-init data-focus-input-prev="code-1" data-focus-input-next="code-3" id="code-2" class="block w-20 h-20 py-4 text-2xl font-bold text-center text-gray-900 bg-transparent border border-gray-300 rounded-lg focus:ring-primary-500 focus:border-primary-500 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" required />
+            </div>
+            <div>
+                <label for="code-3" class="sr-only"></label>
+                <input type="text" maxlength="1" data-focus-input-init data-focus-input-prev="code-2" data-focus-input-next="code-4" id="code-3" class="block w-20 h-20 py-4 text-2xl font-bold text-center text-gray-900 bg-transparent border border-gray-300 rounded-lg focus:ring-primary-500 focus:border-primary-500 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" required />
+            </div>
+            <div>
+                <label for="code-4" class="sr-only"></label>
+                <input type="text" maxlength="1" data-focus-input-init data-focus-input-prev="code-3" id="code-4" class="block w-20 h-20 py-4 text-2xl font-bold text-center text-gray-900 bg-transparent border border-gray-300 rounded-lg focus:ring-primary-500 focus:border-primary-500 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" required />
+            </div>
+        </div>
+        <div class="flex flex-col items-center">
+            <p id="helper-text-explanation" class="mt-2 text-lg text-gray-500 dark:text-gray-400">Įveskite kodą, kurį matote ant ekrano.</p>
+            <div class="max-w-[260px] mt-4">
+                <button id="submit" type="button"
+                    class="w-full inline-flex justify-center items-center whitespace-nowrap rounded-lg bg-indigo-500 px-4 py-3 text-lg font-medium text-white shadow-sm shadow-indigo-950/10 hover:bg-indigo-600 focus:outline-none focus:ring focus:ring-indigo-300 focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 transition-colors duration-150">Patvirtinti</button>
+            </div>
+        </div>
+        <div class="flex justify-center items-center">
+            <div class="text-center">
+                <h2 class="text-white text-6xl font-mono countdown mt-2 mb-2">
+                    <span class="countdown-value" id="countdownValue">0</span>
+                </h2>
+
+                <div class="p-2 bg-indigo-800 items-center text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex" role="alert">
+                    <span class="flex rounded-full bg-indigo-500 uppercase px-2 py-1 text-xs font-bold mr-3">Naujiena</span>
+                    <span class="font-semibold mr-2 text-left flex-auto whitespace-nowrap">Įsigykite VIP paslaugą ir pašalinkite AFK limitą!</span>
+                    <svg class="fill-current opacity-75 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M12.95 10.707l.707-.707L8 4.343 6.586 5.757 10.828 10l-4.242 4.243L8 15.657l4.95-4.95z"/></svg>
+                </div>
+            </div>
+        </div>
+    </form>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

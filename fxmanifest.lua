@@ -17,9 +17,6 @@ client_scripts {
 	'client.lua',
 }
 
-shared_scripts {
-    '@ox_lib/init.lua',
-}
 ui_page {
 	'/ui/index.html',
 }
@@ -29,6 +26,3 @@ files {
 	'/ui/style.css',
 	'/ui/script.js',
 }
-
-
-dependency 'es_extended'

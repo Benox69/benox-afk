@@ -4,8 +4,6 @@ game 'gta5'
 description 'Simple anti-afk script'
 author 'benox'
 lua54 'yes'
-version '1.10.5'
-
 
 server_scripts {
 	'config.lua',
